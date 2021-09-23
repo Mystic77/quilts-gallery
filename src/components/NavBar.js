@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <header>
+    <header className="bg-red-600">
       <div>
         <nav>
           <NavLink to="/" exact>
