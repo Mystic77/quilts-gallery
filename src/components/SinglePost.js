@@ -43,13 +43,13 @@ const SinglePost = () => {
             <div className="bg-white bg-opacity-75 rounded p-12">
               <h1 className="text-3xl lg:text-6xl mb-4">{singlePost.title}</h1>
             </div>
-            <img
-              src={singlePost.mainImage.asset.url}
-              alt={singlePost.title}
-              className="w-full object-cover rounded"
-              style={{ height: '400px' }}
-            />
           </div>
+          <img
+            src={singlePost.mainImage.asset.url}
+            alt={singlePost.title}
+            className="w-full object-cover rounded"
+            style={{ height: '400px' }}
+          />
         </header>
         <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
           <BlockContent
