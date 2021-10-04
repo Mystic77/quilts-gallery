@@ -33,6 +33,8 @@ const SinglePost = () => {
       .catch(console.error);
   }, [slug]);
 
+  if (!singlePost) return <div>Loading...</div>;
+
   return (
     <main className="bg-gray-200 min-h-screen p-12">
       <article className="container shadow-lg mx-auto bg-green-100 rounded-lg">
