@@ -3,7 +3,7 @@ import Home from './components/Home';
 import About from './components/About';
 import SinglePost from './components/SinglePost';
 import Post from './components/Post';
-import Project from './components/Project';
+import Contact from './components/Contact';
 import NavBar from './components/NavBar';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route component={About} path="/about" />
         <Route component={SinglePost} path="/gallery/:slug" />
         <Route component={Post} path="/gallery" />
-        <Route component={Project} path="/project" />
+        <Route component={Contact} path="/contact" />
       </Switch>
     </BrowserRouter>
   );

@@ -24,10 +24,19 @@ const Post = () => {
       .catch(console.error);
   }, []);
 
+  if (!postData)
+    return (
+      <div className="relative text-gray-300 bg-gray-900 min-h-screen p-12">
+        Loading...
+      </div>
+    );
+
   return (
-    <main className="bg-green-100 min-h-screen p-12">
+    <main className="bg-gray-900 min-h-screen p-12">
       <section className="container mx-auto">
-        <h1 className="text-5xl flex justify-center mb-12">Gallery</h1>
+        <h1 className="text-5xl flex justify-center mb-12 text-gray-300 cursive">
+          Gallery
+        </h1>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {postData &&
             postData.map((post, index) => (
@@ -46,7 +55,7 @@ const Post = () => {
                       className="w-full h-full rounded-md object-cover absolute"
                     />
                     <span className="block relative h-full w-full justify-end items-end pb-4">
-                      <h3 className="text-gray-200 text-lg font-bold px-3 py-4 bg-red-700 bg-opacity-75 rounded">
+                      <h3 className=" text-gray-200 text-lg font-bold px-3 py-4 bg-green-900 bg-opacity-75 rounded">
                         {' '}
                         {post.title}{' '}
                       </h3>

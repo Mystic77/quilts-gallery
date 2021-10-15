@@ -18,6 +18,7 @@ const SinglePost = () => {
       .fetch(
         `*[slug.current == "${slug}"]{
       title,
+      dimensions,
       _id,
       slug,
       mainImage{
@@ -38,25 +39,29 @@ const SinglePost = () => {
   return (
     <main className="bg-gray-200 min-h-screen p-12">
       <article className="container shadow-lg mx-auto bg-green-100 rounded-lg">
-        <header className="relative">
-          <div className="absolute h-full w-full flex items-center justify-center p-8">
-            <div className="bg-white bg-opacity-75 rounded p-12">
-              <h1 className="text-3xl lg:text-6xl mb-4">{singlePost.title}</h1>
-            </div>
+        <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full grid lg:grid-cols-2">
+          <div className="mr-8">
+            <img
+              src={singlePost.mainImage.asset.url}
+              alt={singlePost.title}
+              className="w-full object-cover rounded"
+              style={{ height: '400px' }}
+            />
           </div>
-          <img
-            src={singlePost.mainImage.asset.url}
-            alt={singlePost.title}
-            className="w-full object-cover rounded"
-            style={{ height: '400px' }}
-          />
-        </header>
-        <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
-          <BlockContent
-            blocks={singlePost.body}
-            projectId="c6ge4zek"
-            dataset="production"
-          />
+          <div className="max-w-4xl">
+            <h1 className="mb-2">
+              <span>Title: </span>
+              {singlePost.title}
+            </h1>
+            <h3 className="mb-2">
+              <span>Dimensions: </span> {singlePost.dimensions}
+            </h3>
+            <BlockContent
+              blocks={singlePost.body}
+              projectId="c6ge4zek"
+              dataset="production"
+            />
+          </div>
         </div>
       </article>
     </main>

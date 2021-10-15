@@ -18,10 +18,9 @@ export default {
       },
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: { type: 'author' },
+      name: 'dimensions',
+      title: 'Dimensions',
+      type: 'string',
     },
     {
       name: 'mainImage',
@@ -30,12 +29,6 @@ export default {
       options: {
         hotspot: true,
       },
-    },
-
-    {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
     },
     {
       name: 'body',
@@ -47,7 +40,6 @@ export default {
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
       media: 'mainImage',
     },
     prepare(selection) {
