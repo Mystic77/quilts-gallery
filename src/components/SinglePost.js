@@ -34,11 +34,11 @@ const SinglePost = () => {
       .catch(console.error);
   }, [slug]);
 
-  if (!singlePost) return <div>Loading...</div>;
+  if (!singlePost) return <div className="bg-black">Loading...</div>;
 
   return (
-    <main className="bg-gray-200 min-h-screen p-12">
-      <article className="container shadow-lg mx-auto bg-green-100 rounded-lg">
+    <main className="bg-black min-h-screen p-12">
+      <article className="container shadow-lg mx-auto rounded-lg">
         <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full grid lg:grid-cols-2">
           <div className="mr-8">
             <img
@@ -48,7 +48,7 @@ const SinglePost = () => {
               style={{ height: '400px' }}
             />
           </div>
-          <div className="max-w-4xl">
+          <div className="max-w-4xl text-gray-200">
             <h1 className="mb-2">
               <span>Title: </span>
               {singlePost.title}

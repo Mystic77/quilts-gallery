@@ -55,7 +55,7 @@ const Post = () => {
                       className="w-full h-full rounded-md object-cover absolute"
                     />
                     <span className="block relative h-full w-full justify-end items-end pb-4">
-                      <h3 className=" text-gray-200 text-lg font-bold px-3 py-4 bg-green-900 bg-opacity-75 rounded">
+                      <h3 className=" text-gray-200 text-lg font-bold px-3 py-4 bg-gray-600 bg-opacity-80 rounded">
                         {' '}
                         {post.title}{' '}
                       </h3>

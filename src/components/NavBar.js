@@ -4,17 +4,19 @@ import { SocialIcon } from 'react-social-icons';
 
 const NavBar = () => {
   return (
-    <header className="bg-gray-900">
+    <header className="bg-black">
       <div className="container mx-auto flex justify-between">
         <nav className="flex">
           <NavLink
             to="/"
             exact
             activeClassName="text-white"
-            className="inline-flex items-center py-6 px-3 mr-4 text-gray-300 hover:text-green-800 text-4xl font-bold cursive tracking-widest"
+            className="inline-flex items-center py-6 px-3 mr-4 text-gray-300 hover:text-gray-200 text-4xl font-bold cursive tracking-widest"
           >
             Art Quilts
           </NavLink>
+        </nav>
+        <div className="inline-flex py-3 px-3 my-6">
           <NavLink
             to="/gallery"
             activeClassName="underline"
@@ -36,22 +38,6 @@ const NavBar = () => {
           >
             Contact
           </NavLink>
-        </nav>
-        <div className="inline-flex py-3 px-3 my-6">
-          <SocialIcon
-            url="https://linkedin.com"
-            className="mr-4"
-            target="_blank"
-            fgColor="#ffff"
-            style={{ height: 35, width: 35 }}
-          />
-          <SocialIcon
-            url="https://facebook.com"
-            className="mr-4"
-            target="_blank"
-            fgColor="#ffff"
-            style={{ height: 35, width: 35 }}
-          />
         </div>
       </div>
     </header>
